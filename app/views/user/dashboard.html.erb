@@ -1,0 +1,14 @@
+<main>
+    <section class="series-list">
+        <% @series.each do |serie| %>
+            <a href="/series/<%= serie.id %>" class="serie">
+                <img class="serie-card-image" src="<%= serie.image_url %>" alt="Imagem da Série">
+                <div class="info"> 
+                    <h2><%= serie.title %></h2>
+                    <p><%= serie.description %></p>
+                    <p style= "font-size: 12px"> Autor: <%= serie.user.name %></p>
+                </div>
+            </a>
+        <% end %>
+    </section>
+</main>
